@@ -70,17 +70,27 @@
         }
         
         .profile-picture {
-            background: linear-gradient(135deg, #1a1a1a 0%, #374151 50%, #6b7280 100%);
+            background: white;
             position: relative;
             overflow: hidden;
-            background-size: cover;
-            background-position: center;
+            width: 80px;
+            height: 96px;
         }
         
         .profile-picture img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+        
+        .profile-picture::before {
+            display: none;
+        }
+        
+        .profile-picture.has-image::before {
+            display: none;
         }
         
         .profile-picture::before {
@@ -182,11 +192,10 @@
                     </div>
                 </div>
                 <div class="w-20 h-24 profile-picture rounded-lg ml-8 flex items-center justify-center flex-shrink-0">
-                    <!-- To add your picture, uncomment and replace with your image URL:
-                    <img src="your-image-url.jpg" alt="Muhammad Rohan Ali Asmat" class="rounded-lg" />
-                    -->
-                    <!-- Default initials (remove when using image): -->
-                    <span class="text-white text-lg font-bold font-mono">MRA</span>
+                    <img src="./assets/Microsatellites DP.png" alt="Muhammad Rohan Ali Asmat" />
+                    
+                    <!-- If no image, uncomment the initials below and comment out the img tag above -->
+                    <!-- <span class="text-white text-lg font-bold font-mono">MRA</span> -->
                 </div>
             </div>
         </header>
@@ -321,6 +330,7 @@
                     </div>
                 </div>
                 -->
+
                 <div class="bg-subtle p-8 rounded-2xl">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
@@ -692,9 +702,9 @@
                         <button class="px-8 py-3 bg-ink text-white rounded-lg font-medium button-hover">
                             Download CV (PDF)
                         </button>
-                        <button class="px-8 py-3 border border-ink text-ink rounded-lg font-medium button-hover">
+                        <a href="https://calendly.com/rohan-ibn-tariq/30min" target="_blank" class="px-8 py-3 border border-ink text-ink rounded-lg font-medium button-hover inline-block text-center no-underline">
                             Schedule Consultation
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -747,9 +757,13 @@
                     const targetSection = document.getElementById(targetId);
                     
                     if (targetSection) {
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                        const navHeight = 64; // Height of fixed navigation bar
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navHeight - 20; // Extra 20px padding
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
                         });
                     }
                 });
