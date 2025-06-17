@@ -300,7 +300,6 @@
                 Professional Experience
             </h2>
             <div class="space-y-12">
-                <!--
                 <div class="bg-subtle p-8 rounded-2xl">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
@@ -320,8 +319,7 @@
                         <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Genomics</span>
                     </div>
                 </div>
-                -->
-                
+
                 <div class="bg-subtle p-8 rounded-2xl">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
@@ -713,17 +711,12 @@
             const searchTerm = document.getElementById('publicationSearch').value.toLowerCase();
             const publications = document.querySelectorAll('.publication-item');
             
-            // Clear previous highlights
-            publications.forEach(item => {
-                item.innerHTML = item.innerHTML.replace(/<span class="search-highlight">/g, '').replace(/<\/span>/g, '');
-            });
-            
             publications.forEach(item => {
                 const text = item.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
+                if (text.includes(searchTerm) || searchTerm === '') {
                     item.style.display = 'block';
                 } else {
-                    item.style.display = searchTerm ? 'none' : 'block';
+                    item.style.display = 'none';
                 }
             });
         }
@@ -732,17 +725,12 @@
             const searchTerm = document.getElementById('contributionSearch').value.toLowerCase();
             const contributions = document.querySelectorAll('.contribution-item');
             
-            // Clear previous highlights
-            contributions.forEach(item => {
-                item.innerHTML = item.innerHTML.replace(/<span class="search-highlight">/g, '').replace(/<\/span>/g, '');
-            });
-            
             contributions.forEach(item => {
                 const text = item.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
+                if (text.includes(searchTerm) || searchTerm === '') {
                     item.style.display = 'block';
                 } else {
-                    item.style.display = searchTerm ? 'none' : 'block';
+                    item.style.display = 'none';
                 }
             });
         }
