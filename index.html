@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rohan Ali Asmat - Researcher & Software Product Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['ETBembo', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', 'Georgia', 'serif'],
+                        'sans': ['Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'],
+                        'mono': ['Consolas', 'Monaco', 'Courier New', 'monospace'],
+                        'arabic': ['Amiri', 'Traditional Arabic', 'Arabic Typesetting', 'serif']
+                    },
+                    colors: {
+                        'paper': '#fefefe',
+                        'ink': '#1a1a1a',
+                        'ink-light': '#374151',
+                        'ink-lighter': '#6b7280',
+                        'accent': '#000000',
+                        'divider': '#e5e7eb',
+                        'subtle': '#f9fafb'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/et-bembo" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/et-bembo');
+        
+        .tufte-style {
+            font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+            text-rendering: optimizeLegibility;
+        }
+        
+        .research-paper {
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+        }
+        
+        .button-hover {
+            transition: all 0.2s ease;
+        }
+        
+        .button-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .newthought {
+            font-variant: small-caps;
+            font-size: 1.2em;
+            letter-spacing: 0.05em;
+        }
+        
+        .small-caps {
+            font-variant: small-caps;
+            letter-spacing: 0.1em;
+        }
+        
+        .arabic-text {
+            direction: rtl;
+            text-align: right;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .profile-picture {
+            background: linear-gradient(135deg, #1a1a1a 0%, #374151 50%, #6b7280 100%);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-picture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20,20 L80,20 L80,80 L20,80 Z M30,30 L70,30 L70,70 L30,70 Z M40,40 L60,40 L60,60 L40,60 Z' fill='%23ffffff' opacity='0.3'/%3E%3Ccircle cx='25' cy='25' r='3' fill='%23ffffff' opacity='0.6'/%3E%3Ccircle cx='75' cy='25' r='3' fill='%23ffffff' opacity='0.6'/%3E%3Ccircle cx='25' cy='75' r='3' fill='%23ffffff' opacity='0.6'/%3E%3Ccircle cx='75' cy='75' r='3' fill='%23ffffff' opacity='0.6'/%3E%3C/svg%3E") center/cover;
+        }
+        
+        .profile-picture.has-image::before {
+            display: none;
+        }
+        
+        body {
+            counter-reset: section;
+            font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+            text-rendering: optimizeLegibility;
+        }
+        
+        h1, h2, h3 {
+            font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+        }
+        
+        .search-highlight {
+            background-color: #fef3c7;
+            padding: 1px 2px;
+            border-radius: 2px;
+        }
+        
+        .academic-list {
+            counter-reset: item;
+        }
+        
+        .academic-list > li {
+            counter-increment: item;
+        }
+        
+        .academic-list > li::before {
+            content: "[" counter(item) "] ";
+            font-weight: 600;
+            color: #6b7280;
+        }
+        
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body class="bg-white text-ink font-sans leading-relaxed">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-divider no-print">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-serif font-semibold text-xl text-ink">Muhammad Rohan Ali Asmat</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#abstract" class="text-ink-lighter hover:text-ink transition-colors text-sm font-medium">Abstract</a>
+                    <a href="#expertise" class="text-ink-lighter hover:text-ink transition-colors text-sm font-medium">Expertise</a>
+                    <a href="#experience" class="text-ink-lighter hover:text-ink transition-colors text-sm font-medium">Experience</a>
+                    <a href="#education" class="text-ink-lighter hover:text-ink transition-colors text-sm font-medium">Education</a>
+                    <a href="#publications" class="text-ink-lighter hover:text-ink transition-colors text-sm font-medium">Publications</a>
+                    <a href="#contributions" class="text-ink-lighter hover:text-ink transition-colors text-sm font-medium">Contributions</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto bg-paper research-paper min-h-screen mt-16">
+        <!-- Header -->
+        <header class="px-12 pt-16 pb-12 border-b border-divider">
+            <div class="flex items-start justify-between">
+                <div class="flex-1">
+                    <h1 class="font-serif text-5xl font-bold text-ink mb-2 tracking-tight tufte-style">
+                        Muhammad Rohan Ali Asmat
+                    </h1>
+                    <div class="font-arabic text-2xl text-ink-light mb-6 text-left">
+                        محمد روحان علی عصمت
+                    </div>
+                    <p class="text-xl text-ink-light mb-8 font-light italic">
+                        Researcher | Software Product Designer/Developer
+                    </p>
+                    <div class="flex flex-wrap gap-8 text-sm text-ink-lighter small-caps">
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-ink rounded-full mr-2"></span>
+                            Muhammad.R.Ali.A@proton.me
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-ink rounded-full mr-2"></span>
+                            +923186455253
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-ink rounded-full mr-2"></span>
+                            Lahore, Pakistan
+                        </div>
+                    </div>
+                </div>
+                <div class="w-20 h-24 profile-picture rounded-lg ml-8 flex items-center justify-center flex-shrink-0">
+                    <!-- To add your picture, uncomment and replace with your image URL:
+                    <img src="your-image-url.jpg" alt="Muhammad Rohan Ali Asmat" class="rounded-lg" />
+                    -->
+                    <!-- Default initials (remove when using image): -->
+                    <span class="text-white text-lg font-bold font-mono">MRA</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Abstract -->
+        <section id="abstract" class="px-12 py-12 border-b border-divider">
+            <h2 class="font-serif text-2xl font-semibold text-ink mb-8 before:content-['1._'] before:text-ink-lighter before:mr-3 tufte-style">
+                Abstract
+            </h2>
+            <div class="prose prose-lg max-w-none tufte-style">
+                <p class="text-ink-light text-lg leading-relaxed mb-6 text-justify">
+                    <span class="newthought">Distinguished Researcher and Software Product Designer</span> with over 8 years of specialized experience in frontend development, user experience design, and bioinformatics research. Currently pursuing advanced research in computational biology at Köster lab, University of Essen, Germany. Demonstrated expertise in venture design processes, static website generation with semantic technologies, and large-scale scientific workflow development. Published author with contributions to CEUR Workshop Proceedings and semantic web technologies.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-ink mb-2 font-mono">8+</div>
+                        <div class="text-sm text-ink-lighter uppercase tracking-wide small-caps">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-ink mb-2 font-mono">4</div>
+                        <div class="text-sm text-ink-lighter uppercase tracking-wide small-caps">Publications</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-ink mb-2 font-mono">15+</div>
+                        <div class="text-sm text-ink-lighter uppercase tracking-wide small-caps">Projects</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-ink mb-2 font-mono">3</div>
+                        <div class="text-sm text-ink-lighter uppercase tracking-wide small-caps">EU Projects</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Expertise -->
+        <section id="expertise" class="px-12 py-12 border-b border-divider">
+            <h2 class="font-serif text-2xl font-semibold text-ink mb-8 before:content-['2._'] before:text-ink-lighter before:mr-3 tufte-style">
+                Core Competencies
+            </h2>
+            
+            <div class="bg-subtle p-8 rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <!-- Left Column -->
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Management</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                Slack • Rocket Chat • Microsoft Teams • Jira • Confluence • Trello • Whimsical • Miro • Microsoft Whiteboard • Business Model Canvas • Corporate Innovation Canvas • Alex Cowan Templates • Agile Team Charter • Venture Design Template • Product Sprints Kickoff Slides
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Frontend</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                CSS • materializecss • Bootstrap • jQuery • React • Redux • Material UI React • D3.js • Node-Red Dashboard
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">User Experience Design/IxD</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                Adobe Photoshop • Balsamiq • Pencil Project • Justinmind Prototyper
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Programming Languages</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                HTML • C++ • Python • Objective-C • PHP • Javascript • SPARQL
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Development Tools</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                Vim • Brackets • Atom • Node-Red • xCode
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Operating Systems</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                Ubuntu • Mac OS
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Others</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                Overleaf • LaTeX • MongoDB • GitHub • Bitbucket • Docker • Docker-compose • Tmux
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Languages</h3>
+                            <p class="text-sm text-ink-light leading-relaxed">
+                                English (Professional Level Proficiency) • Urdu (Native) • German (Goethe Certificate, B1 Level Proficiency) • Arabic (Intermediate Grammar Skills, above beginner speaking, writing, hearing, listening skills)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience" class="px-12 py-12 border-b border-divider">
+            <h2 class="font-serif text-2xl font-semibold text-ink mb-8 before:content-['3._'] before:text-ink-lighter before:mr-3">
+                Professional Experience
+            </h2>
+            <div class="space-y-12">
+                <div class="bg-subtle p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold mb-2">Bioinformatics Intern (Virtual)</h3>
+                            <p class="text-ink-light font-semibold">Köster Lab, Prof. Dr. Johannes Köster, Essen, Germany</p>
+                        </div>
+                        <span class="text-ink-lighter text-sm font-mono mt-2 md:mt-0">May 2025 — Present</span>
+                    </div>
+                    <p class="text-ink-light mb-6 text-justify leading-relaxed">
+                        Contributing to cutting-edge bioinformatics research focusing on computational genomics and workflow development. 
+                        Working on large-scale genomic data analysis pipelines and developing novel algorithms for sequence analysis.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Snakemake</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Bioinformatics</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Genomics</span>
+                    </div>
+                </div>
+
+                <div class="bg-subtle p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold mb-2">Frontend and UX Lead</h3>
+                            <p class="text-ink-light font-semibold">CARTEBLANCHE INNOVATION INTEGRATED, Lahore, Pakistan</p>
+                        </div>
+                        <span class="text-ink-lighter text-sm font-mono mt-2 md:mt-0">Sep 2019 — May 2021</span>
+                    </div>
+                    <p class="text-ink-light mb-6 text-justify leading-relaxed">
+                        Led the Product Design Department, operationalizing Venture Design Process and setting reusable artifacts for sprints. 
+                        Facilitated cross-functional team alignment using Business Model Canvas and Agile Team Charter methodologies.
+                    </p>
+                    <ul class="space-y-2 text-ink-light mb-6">
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-ink rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Led Problem Discovery, Motivation, Usability, and Architecture Sprints
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-ink rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Developed Hirecinch - Application Tracking System
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-ink rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            Documented company-wide coding standards and facilitated implementation
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Redux</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Material UI</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">UX Design</span>
+                    </div>
+                </div>
+
+                <div class="bg-subtle p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold mb-2">Research Assistant</h3>
+                            <p class="text-ink-light font-semibold">FRAUNHOFER IAIS, Germany</p>
+                        </div>
+                        <span class="text-ink-lighter text-sm font-mono mt-2 md:mt-0">Jul 2017 — Jun 2019</span>
+                    </div>
+                    <p class="text-ink-light mb-6 text-justify leading-relaxed">
+                        Developed static websites using Jekyll-RDF for multiple research projects. Contributed to European Union projects 
+                        including biotope and GRACEFUL. Worked extensively with semantic web technologies and Node-RED workflows.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Jekyll-RDF</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Node-RED</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">SPARQL</span>
+                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">EU Projects</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="px-12 py-12 border-b border-divider">
+            <h2 class="font-serif text-2xl font-semibold text-ink mb-8 before:content-['4._'] before:text-ink-lighter before:mr-3">
+                Education
+            </h2>
+            <div class="space-y-8">
+                <div class="bg-subtle p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-semibold text-ink mb-2">MSc in Media Informatics</h3>
+                            <p class="text-ink-light font-medium">RWTH Aachen University, Germany</p>
+                        </div>
+                        <span class="text-ink-lighter text-sm font-mono mt-2 md:mt-0">2016</span>
+                    </div>
+                    <p class="text-ink-light text-justify leading-relaxed">
+                        <strong>CGPA:</strong> gut (2.1) in German Scale. Specialized in human-computer interaction, 
+                        semantic web technologies, and digital media systems.
+                    </p>
+                </div>
+
+                <div class="bg-subtle p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-semibold text-ink mb-2">Bachelor in Computer Science</h3>
+                            <p class="text-ink-light font-medium">National University of Emerging Sciences (FAST-NU), Lahore</p>
+                        </div>
+                        <span class="text-ink-lighter text-sm font-mono mt-2 md:mt-0">2013</span>
+                    </div>
+                    <p class="text-ink-light text-justify leading-relaxed">
+                        <strong>CGPA:</strong> 3.24 out of 4.0. Achieved Dean's List in Fall 2009 with GPA of 3.69.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications" class="px-12 py-12 border-b border-divider">
+            <h2 class="font-serif text-2xl font-semibold text-ink mb-8 before:content-['5._'] before:text-ink-lighter before:mr-3">
+                Selected Publications
+            </h2>
+            
+            <!-- Search -->
+            <div class="mb-8 no-print">
+                <input 
+                    type="text" 
+                    id="publicationSearch" 
+                    placeholder="Search publications..."
+                    class="w-full p-3 border border-divider rounded-lg focus:ring-2 focus:ring-ink focus:border-ink text-sm"
+                    onkeyup="searchPublications()"
+                />
+            </div>
+
+            <ol class="academic-list space-y-6" id="publicationsList">
+                <li class="bg-subtle p-6 rounded-2xl publication-item">
+                    <h3 class="font-serif text-lg font-semibold text-ink mb-2">
+                        A Comparative User Evaluation on Visual Ontology Modeling Using Node-Link Diagrams
+                    </h3>
+                    <p class="text-sm text-ink-lighter mb-3">
+                        M. R. A. Asmat, et al. <em>Best Workshop Papers of ISWC 2018</em>, CEUR Workshop Proceedings, 2018.
+                    </p>
+                    <p class="text-sm text-justify leading-relaxed mb-3">
+                        Workshop paper presented at ISWC 2018. Evaluated different visual approaches for ontology modeling 
+                        and their impact on user understanding and efficiency.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://ceur-ws.org/Vol-2187/" class="text-ink hover:text-ink-light text-xs font-mono border border-divider px-2 py-1 rounded button-hover">CEUR Link</a>
+                        <a href="https://dblp.dagstuhl.de/db/conf/semweb/best2018.html" class="text-ink hover:text-ink-light text-xs font-mono border border-divider px-2 py-1 rounded button-hover">DBLP</a>
+                    </div>
+                </li>
+
+                <li class="bg-subtle p-6 rounded-2xl publication-item">
+                    <h3 class="font-serif text-lg font-semibold text-ink mb-2">
+                        CEUR Make GUI - A Usable Web Frontend Supporting Scientific Workshop Proceedings
+                    </h3>
+                    <p class="text-sm text-ink-lighter mb-3">
+                        M. R. A. Asmat, et al. <em>Conference Paper</em>, Springer, 2017.
+                    </p>
+                    <p class="text-sm text-justify leading-relaxed mb-3">
+                        Developed a usable web frontend for CEUR Workshop Proceedings submission workflow, 
+                        significantly improving user experience for scientific workshop organizers.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-67162-8_16" class="text-ink hover:text-ink-light text-xs font-mono border border-divider px-2 py-1 rounded button-hover">Springer Link</a>
+                    </div>
+                </li>
+
+                <li class="bg-subtle p-6 rounded-2xl publication-item">
+                    <h3 class="font-serif text-lg font-semibold text-ink mb-2">
+                        A Usable Web Frontend for Supporting Scientific Workshop Proceedings
+                    </h3>
+                    <p class="text-sm text-ink-lighter mb-3">
+                        M. R. A. Asmat. <em>Master Thesis</em>, RWTH Aachen University, 2016.
+                    </p>
+                    <p class="text-sm text-justify leading-relaxed">
+                        Master thesis developing CEUR Make GUI with comprehensive usability studies and 
+                        comparative analysis showing significant improvements in interface design and usability.
+                    </p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- GitHub Contributions -->
+        <section id="contributions" class="px-12 py-12">
+            <h2 class="font-serif text-2xl font-semibold text-ink mb-8 before:content-['6._'] before:text-ink-lighter before:mr-3">
+                Open Source Contributions & GitHub Activity
+            </h2>
+            
+            <!-- Search -->
+            <div class="mb-8 no-print">
+                <input 
+                    type="text" 
+                    id="contributionSearch" 
+                    placeholder="Search contributions..."
+                    class="w-full p-3 border border-divider rounded-lg focus:ring-2 focus:ring-ink focus:border-ink text-sm"
+                    onkeyup="searchContributions()"
+                />
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-subtle p-6 rounded-2xl text-center">
+                    <div class="text-2xl font-bold text-ink mb-2 font-mono">15+</div>
+                    <div class="text-xs text-ink-lighter uppercase tracking-wide">Repositories</div>
+                </div>
+                <div class="bg-subtle p-6 rounded-2xl text-center">
+                    <div class="text-2xl font-bold text-ink mb-2 font-mono">3</div>
+                    <div class="text-xs text-ink-lighter uppercase tracking-wide">EU Projects</div>
+                </div>
+                <div class="bg-subtle p-6 rounded-2xl text-center">
+                    <div class="text-2xl font-bold text-ink mb-2 font-mono">5+</div>
+                    <div class="text-xs text-ink-lighter uppercase tracking-wide">Research Tools</div>
+                </div>
+                <div class="bg-subtle p-6 rounded-2xl text-center">
+                    <div class="text-2xl font-bold text-ink mb-2 font-mono">8+</div>
+                    <div class="text-xs text-ink-lighter uppercase tracking-wide">Years Active</div>
+                </div>
+            </div>
+
+            <!-- Contributions -->
+            <div id="contributionsList">
+                <!-- Research Projects -->
+                <div class="mb-12 contribution-item">
+                    <h3 class="font-serif text-xl font-semibold text-ink mb-6 flex items-center">
+                        <span class="w-3 h-3 bg-ink rounded-full mr-3"></span>
+                        Research & Academic Projects
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-subtle p-4 rounded-lg flex justify-between items-center">
+                            <div>
+                                <span class="text-ink font-medium">CEUR-Make GUI - Scientific Workshop Proceedings</span>
+                                <div class="text-xs text-ink-lighter mt-1">Web frontend for automating CEUR Workshop Proceedings submission</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">HTML</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">jQuery</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">PHP</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-ink-lighter font-mono">Master Thesis</span>
+                                <span class="text-ink text-xs font-mono border border-divider px-2 py-1 rounded">RohanAsmat commits</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-subtle p-4 rounded-lg flex justify-between items-center">
+                            <div>
+                                <span class="text-ink font-medium">SDA Tech Website - Jekyll-RDF Migration</span>
+                                <div class="text-xs text-ink-lighter mt-1">Migrated from WordPress to Jekyll-RDF static generation</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Jekyll</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">RDF</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Semantic Web</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-ink-lighter font-mono">Fraunhofer</span>
+                                <a href="https://github.com/SmartDataAnalytics" class="text-ink hover:text-ink-light text-xs font-mono border border-divider px-2 py-1 rounded button-hover">Organization</a>
+                            </div>
+                        </div>
+
+                        <div class="bg-subtle p-4 rounded-lg flex justify-between items-center">
+                            <div>
+                                <span class="text-ink font-medium">AskNow Website - Question Answering System</span>
+                                <div class="text-xs text-ink-lighter mt-1">Enhanced UX for natural language question answering</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">JavaScript</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">SPARQL</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Knowledge Graphs</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-ink-lighter font-mono">Research</span>
+                                <span class="text-ink text-xs font-mono border border-divider px-2 py-1 rounded">Live Website</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EU Projects -->
+                <div class="mb-12 contribution-item">
+                    <h3 class="font-serif text-xl font-semibold text-ink mb-6 flex items-center">
+                        <span class="w-3 h-3 bg-ink rounded-full mr-3"></span>
+                        European Union Projects
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-subtle p-4 rounded-lg flex justify-between items-center">
+                            <div>
+                                <span class="text-ink font-medium">GRACEFUL - Constraint Functional Languages</span>
+                                <div class="text-xs text-ink-lighter mt-1">Visual editor frontend for Global systems Rapid Assessment tools</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">JavaScript</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">D3.js</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Visual Editor</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-ink-lighter font-mono">EU H2020</span>
+                                <span class="text-ink text-xs font-mono border border-divider px-2 py-1 rounded">Source Available</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-subtle p-4 rounded-lg flex justify-between items-center">
+                            <div>
+                                <span class="text-ink font-medium">biotope - User Interface as a Service</span>
+                                <div class="text-xs text-ink-lighter mt-1">UI service package and Node-RED flows for smart city applications</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Node-RED</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">IoT</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Smart City</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-ink-lighter font-mono">EU Project</span>
+                                <span class="text-ink text-xs font-mono border border-divider px-2 py-1 rounded">Multiple Repos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Projects -->
+                <div class="mb-12 contribution-item">
+                    <h3 class="font-serif text-xl font-semibold text-ink mb-6 flex items-center">
+                        <span class="w-3 h-3 bg-ink rounded-full mr-3"></span>
+                        Industry Projects
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-subtle p-4 rounded-lg flex justify-between items-center">
+                            <div>
+                                <span class="text-ink font-medium">Hirecinch - Application Tracking System</span>
+                                <div class="text-xs text-ink-lighter mt-1">Complete ATS platform with frontend development and UX design</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">React</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Redux</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Material UI</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-ink-lighter font-mono">CarteBlanche</span>
+                                <span class="text-ink text-xs font-mono border border-divider px-2 py-1 rounded">Production</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-subtle p-4 rounded-lg flex justify-between items-center">
+                            <div>
+                                <span class="text-ink font-medium">Vicenna Electronic Medical Records</span>
+                                <div class="text-xs text-ink-lighter mt-1">UX design and prototyping for healthcare management system</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Healthcare IT</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">UX Design</span>
+                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Prototyping</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-ink-lighter font-mono">TechLogix</span>
+                                <span class="text-ink text-xs font-mono border border-divider px-2 py-1 rounded">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note about GitHub -->
+                <div class="bg-subtle p-6 rounded-lg border-l-4 border-ink">
+                    <p class="text-sm text-ink-light">
+                        <strong>Note:</strong> Due to GitHub profile migration, contributions under username "RohanAsmat" 
+                        may not appear in contributor lists, but commit history can be traced by searching this username 
+                        in repository histories.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="border-t border-divider pt-8 mt-12">
+                <div class="text-center">
+                    <div class="text-ink-lighter text-sm mb-6">
+                        For collaboration opportunities, research discussions, or technical consultations:
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-8 text-sm mb-8">
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-ink rounded-full mr-2"></span>
+                            <a href="mailto:Muhammad.R.Ali.A@proton.me" class="text-ink hover:text-ink-light">Muhammad.R.Ali.A@proton.me</a>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-ink rounded-full mr-2"></span>
+                            <a href="tel:+923186455253" class="text-ink hover:text-ink-light">+923186455253</a>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-ink rounded-full mr-2"></span>
+                            <span class="text-ink">Lahore, Pakistan</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex justify-center space-x-4">
+                        <button class="px-8 py-3 bg-ink text-white rounded-lg font-medium button-hover">
+                            Download CV (PDF)
+                        </button>
+                        <button class="px-8 py-3 border border-ink text-ink rounded-lg font-medium button-hover">
+                            Schedule Consultation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="px-12 py-8 border-t border-divider text-center text-xs text-ink-lighter">
+            <p>© 2024 Muhammad Rohan Ali Asmat. This CV showcases real projects, contributions, and professional experience.</p>
+            <p class="mt-2">Last updated: December 2024 • Currently available for research collaborations</p>
+        </footer>
+    </div>
+
+    <script>
+        function searchPublications() {
+            const searchTerm = document.getElementById('publicationSearch').value.toLowerCase();
+            const publications = document.querySelectorAll('.publication-item');
+            
+            // Clear previous highlights
+            publications.forEach(item => {
+                item.innerHTML = item.innerHTML.replace(/<span class="search-highlight">/g, '').replace(/<\/span>/g, '');
+            });
+            
+            publications.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm ? 'none' : 'block';
+                }
+            });
+        }
+
+        function searchContributions() {
+            const searchTerm = document.getElementById('contributionSearch').value.toLowerCase();
+            const contributions = document.querySelectorAll('.contribution-item');
+            
+            // Clear previous highlights
+            contributions.forEach(item => {
+                item.innerHTML = item.innerHTML.replace(/<span class="search-highlight">/g, '').replace(/<\/span>/g, '');
+            });
+            
+            contributions.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm ? 'none' : 'block';
+                }
+            });
+        }
+
+        // Smooth scroll navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
