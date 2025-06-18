@@ -74,15 +74,17 @@
             position: relative;
             overflow: hidden;
             width: 80px;
-            height: 96px;
+            height: 80px;
+            border-radius: 50%;
         }
         
         .profile-picture img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top;
+            object-position: center;
             display: block;
+            border-radius: 50%;
         }
         
         .profile-picture::before {
@@ -192,7 +194,8 @@
                     </div>
                 </div>
                 <div class="w-20 h-24 profile-picture rounded-lg ml-8 flex items-center justify-center flex-shrink-0">
-                    <img src="./assets/Microsatellites DP.png" alt="Muhammad Rohan Ali Asmat" />
+                    <!-- Replace the URL below with your actual image URL -->
+                    <img src="YOUR_IMAGE_URL_HERE" alt="Muhammad Rohan Ali Asmat" />
                     
                     <!-- If no image, uncomment the initials below and comment out the img tag above -->
                     <!-- <span class="text-white text-lg font-bold font-mono">MRA</span> -->
@@ -237,66 +240,100 @@
             </h2>
             
             <div class="bg-subtle p-8 rounded-lg">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
                     <!-- Left Column -->
-                    <div class="space-y-6">
+                    <div class="space-y-8">
                         <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Management</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                Slack • Rocket Chat • Microsoft Teams • Jira • Confluence • Trello • Whimsical • Miro • Microsoft Whiteboard • Business Model Canvas • Corporate Innovation Canvas • Alex Cowan Templates • Agile Team Charter • Venture Design Template • Product Sprints Kickoff Slides
-                            </p>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-3 uppercase tracking-wide">Management & Collaboration</h3>
+                            <div class="text-sm text-ink-light leading-relaxed space-y-1">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Slack</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Microsoft Teams</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Jira</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Confluence</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Trello</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Miro</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Whimsical</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Business Model Canvas</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Frontend</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                CSS • materializecss • Bootstrap • jQuery • React • Redux • Material UI React • D3.js • Node-Red Dashboard
-                            </p>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-3 uppercase tracking-wide">Frontend Development</h3>
+                            <div class="text-sm text-ink-light leading-relaxed">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">React</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Redux</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Material UI</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">D3.js</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">CSS</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Bootstrap</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">jQuery</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">User Experience Design/IxD</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                Adobe Photoshop • Balsamiq • Pencil Project • Justinmind Prototyper
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Programming Languages</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                HTML • C++ • Python • Objective-C • PHP • Javascript • SPARQL
-                            </p>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-3 uppercase tracking-wide">Design & Prototyping</h3>
+                            <div class="text-sm text-ink-light leading-relaxed">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Adobe Photoshop</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Balsamiq</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Justinmind</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Right Column -->
-                    <div class="space-y-6">
+                    <div class="space-y-8">
                         <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Development Tools</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                Vim • Brackets • Atom • Node-Red • xCode
-                            </p>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-3 uppercase tracking-wide">Programming Languages</h3>
+                            <div class="text-sm text-ink-light leading-relaxed">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Python</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">JavaScript</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">C++</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">PHP</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">HTML</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">SPARQL</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Objective-C</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Operating Systems</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                Ubuntu • Mac OS
-                            </p>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-3 uppercase tracking-wide">Tools & Platforms</h3>
+                            <div class="text-sm text-ink-light leading-relaxed">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Docker</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">GitHub</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">MongoDB</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">LaTeX</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Ubuntu</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">macOS</span>
+                                    <span class="bg-white px-2 py-1 rounded text-xs border">Vim</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Others</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                Overleaf • LaTeX • MongoDB • GitHub • Bitbucket • Docker • Docker-compose • Tmux
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="font-serif text-sm font-bold text-ink mb-2 uppercase tracking-wide">Languages</h3>
-                            <p class="text-sm text-ink-light leading-relaxed">
-                                English (Professional Level Proficiency) • Urdu (Native) • German (Goethe Certificate, B1 Level Proficiency) • Arabic (Intermediate Grammar Skills, above beginner speaking, writing, hearing, listening skills)
-                            </p>
+                            <h3 class="font-serif text-sm font-bold text-ink mb-3 uppercase tracking-wide">Languages</h3>
+                            <div class="text-sm text-ink-light leading-relaxed space-y-1">
+                                <div><strong>English:</strong> Professional Proficiency</div>
+                                <div><strong>Urdu:</strong> Native</div>
+                                <div><strong>German:</strong> B1 (Goethe Certificate)</div>
+                                <div><strong>Arabic:</strong> Intermediate</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -309,28 +346,6 @@
                 Professional Experience
             </h2>
             <div class="space-y-12">
-                <!--
-                <div class="bg-subtle p-8 rounded-2xl">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                        <div>
-                            <h3 class="font-serif text-2xl font-bold mb-2">Bioinformatics Intern (Virtual)</h3>
-                            <p class="text-ink-light font-semibold">Köster Lab, Prof. Dr. Johannes Köster, Essen, Germany</p>
-                        </div>
-                        <span class="text-ink-lighter text-sm font-mono mt-2 md:mt-0">May 2025 — Present</span>
-                    </div>
-                    <p class="text-ink-light mb-6 text-justify leading-relaxed">
-                        Contributing to cutting-edge bioinformatics research focusing on computational genomics and workflow development. 
-                        Working on large-scale genomic data analysis pipelines and developing novel algorithms for sequence analysis.
-                    </p>
-                    <div class="flex flex-wrap gap-3 mb-6">
-                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Snakemake</span>
-                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Bioinformatics</span>
-                        <span class="px-3 py-1 bg-ink text-white rounded-full text-sm">Genomics</span>
-                    </div>
-                </div>
-                -->
-
                 <div class="bg-subtle p-8 rounded-2xl">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                         <div>
@@ -451,9 +466,13 @@
                         Workshop paper presented at ISWC 2018. Evaluated different visual approaches for ontology modeling 
                         and their impact on user understanding and efficiency.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="https://ceur-ws.org/Vol-2187/" class="text-ink hover:text-ink-light text-xs font-mono border border-divider px-2 py-1 rounded button-hover">CEUR Link</a>
-                        <a href="https://dblp.dagstuhl.de/db/conf/semweb/best2018.html" class="text-ink hover:text-ink-light text-xs font-mono border border-divider px-2 py-1 rounded button-hover">DBLP</a>
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium border border-gray-200">Ontology Modeling</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium border border-gray-200">User Evaluation</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium border border-gray-200">ISWC 2018</span>
+                        <div class="border-l border-gray-300 h-4 mx-1"></div>
+                        <a href="https://ceur-ws.org/Vol-2187/" class="px-3 py-1 bg-white text-ink text-xs rounded-md font-medium border border-gray-300 hover:bg-gray-50 hover:shadow-sm transition-all">CEUR Link</a>
+                        <a href="https://dblp.dagstuhl.de/db/conf/semweb/best2018.html" class="px-3 py-1 bg-white text-ink text-xs rounded-md font-medium border border-gray-300 hover:bg-gray-50 hover:shadow-sm transition-all">DBLP</a>
                     </div>
                 </li>
 
@@ -468,8 +487,12 @@
                         Developed a usable web frontend for CEUR Workshop Proceedings submission workflow, 
                         significantly improving user experience for scientific workshop organizers.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-67162-8_16" class="text-ink hover:text-ink-light text-xs font-mono border border-divider px-2 py-1 rounded button-hover">Springer Link</a>
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium border border-gray-200">Web Frontend</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium border border-gray-200">Scientific Workflow</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium border border-gray-200">Usability</span>
+                        <div class="border-l border-gray-300 h-4 mx-1"></div>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-67162-8_16" class="px-3 py-1 bg-white text-ink text-xs rounded-md font-medium border border-gray-300 hover:bg-gray-50 hover:shadow-sm transition-all">Springer Link</a>
                     </div>
                 </li>
 
@@ -555,9 +578,9 @@
                                 <span class="text-ink font-medium">SDA Tech Website - Jekyll-RDF Migration</span>
                                 <div class="text-xs text-ink-lighter mt-1">Migrated from WordPress to Jekyll-RDF static generation</div>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Jekyll</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">RDF</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Semantic Web</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Jekyll</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">RDF</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Semantic Web</span>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-3">
@@ -571,9 +594,9 @@
                                 <span class="text-ink font-medium">AskNow Website - Question Answering System</span>
                                 <div class="text-xs text-ink-lighter mt-1">Enhanced UX for natural language question answering</div>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">JavaScript</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">SPARQL</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Knowledge Graphs</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">JavaScript</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">SPARQL</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Knowledge Graphs</span>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-3">
@@ -596,9 +619,9 @@
                                 <span class="text-ink font-medium">GRACEFUL - Constraint Functional Languages</span>
                                 <div class="text-xs text-ink-lighter mt-1">Visual editor frontend for Global systems Rapid Assessment tools</div>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">JavaScript</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">D3.js</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Visual Editor</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">JavaScript</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">D3.js</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Visual Editor</span>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-3">
@@ -612,9 +635,9 @@
                                 <span class="text-ink font-medium">biotope - User Interface as a Service</span>
                                 <div class="text-xs text-ink-lighter mt-1">UI service package and Node-RED flows for smart city applications</div>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Node-RED</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">IoT</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Smart City</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Node-RED</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">IoT</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Smart City</span>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-3">
@@ -637,9 +660,9 @@
                                 <span class="text-ink font-medium">Hirecinch - Application Tracking System</span>
                                 <div class="text-xs text-ink-lighter mt-1">Complete ATS platform with frontend development and UX design</div>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">React</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Redux</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Material UI</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">React</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Redux</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Material UI</span>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-3">
@@ -653,9 +676,9 @@
                                 <span class="text-ink font-medium">Vicenna Electronic Medical Records</span>
                                 <div class="text-xs text-ink-lighter mt-1">UX design and prototyping for healthcare management system</div>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Healthcare IT</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">UX Design</span>
-                                    <span class="px-2 py-1 bg-ink text-white text-xs rounded-full">Prototyping</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Healthcare IT</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">UX Design</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded border border-gray-200">Prototyping</span>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-3">
@@ -702,7 +725,7 @@
                         <button class="px-8 py-3 bg-ink text-white rounded-lg font-medium button-hover">
                             Download CV (PDF)
                         </button>
-                        <a href="https://calendly.com/rohan-ibn-tariq/30min" target="_blank" class="px-8 py-3 border border-ink text-ink rounded-lg font-medium button-hover inline-block text-center no-underline">
+                        <a href="https://calendly.com/your-username" target="_blank" class="px-8 py-3 border border-ink text-ink rounded-lg font-medium button-hover inline-block text-center no-underline">
                             Schedule Consultation
                         </a>
                     </div>
@@ -759,7 +782,7 @@
                     if (targetSection) {
                         const navHeight = 64; // Height of fixed navigation bar
                         const elementPosition = targetSection.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - navHeight - 20; // Extra 20px padding
+                        const offsetPosition = elementPosition + window.pageYOffset - navHeight; // Exact positioning
                         
                         window.scrollTo({
                             top: offsetPosition,
